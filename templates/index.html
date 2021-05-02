@@ -57,7 +57,8 @@
 						<li><a href="#testimonials">Testimonials</a></li>
 						<li><a href="#news">News</a></li>
 						<li><a href="#social">Stay tuned</a></li>
-						<li><a href="shortcodes.html">Shortcodes</a></li>
+
+						<li><a href="{{ login_logout_url }}">{% if user %}{{user}}{% else %}Sign In{% endif %}</a></li>
 					</ul>
 				</div>
 			</div>
@@ -73,10 +74,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-sm-12">
-					<img class="logo" src="stylesheets/images/logo.png" alt="Your Logo" height="70" width="144" />
+					<img class="logo" src="stylesheets/images/logo@2x.png" alt="Your Logo"  />
 					<h1 class="slogan">The Best Start Up For <br> Your Elegant App</h1>
-					<a class="download-btn-alt ios-btn" href="#">
-						<i class="icon soc-icon-apple"></i>Download for <b>Apple iOS</b>
+					<a class="download-btn-alt android-btn invert" href="#">
+						<i class="icon soc-icon-android"></i>Download for <b>Android</b>
 					</a>
 				</div>
 				<div class="col-md-4 hidden-sm hidden-xs">
@@ -154,7 +155,7 @@
 	<section id="innovations" class="bg-color2">
 		<div class="container">
 			<div class="title">
-				<h2>Touch the Innovations</h2>
+				<h2>Our works</h2>
 				<p>In our work we try to use only the most modern, convenient and interesting solutions.<br>We want the template you downloaded look unique and new for such a long time as it is possible. </p>
 			</div>
 			<img class="screen wow bounceInUp" src="stylesheets/images/innovation_screen.png" height="387" width="800" alt="" />
@@ -241,17 +242,7 @@ design make it actual for a long time.</p>
 	<!-- BENEFITS2 END -->
 
 	<!-- VIDEO BEGIN -->
-	<section id="video">
-		<div class="container">
-			<div class="title">
-				<h2>Iframe Video</h2>
-				<p>In our work we try to use only the most modern, convenient and interesting solutions.</p>
-			</div>
-			<div class="video-container">
-				<!-- Video iframe code here -->
-			</div>
-		</div>
-	</section>
+
 	<!-- VIDEO END -->
 
 	<!-- SCREENSHOTS BEGIN -->
@@ -405,7 +396,7 @@ design make it actual for a long time.</p>
 	<section id="news">
 		<div class="container-fluid">
 			<div class="title">
-				<h2>App's News</h2>
+				<h2>Company's News</h2>
 				<p>Here you can find all interesting facts about this app:<br>the last updates, sales, latest things and the developers’ stories.</p>
 			</div>
 			<ul class="news-list">
@@ -498,8 +489,8 @@ design make it actual for a long time.</p>
 	<footer id="footer">
 		<div class="container">
 			<a href="index.html#wrap" class="logo goto"> <img src="stylesheets/images/logo_small.png" alt="Your Logo" height="35" width="72"/> </a>
-			<p class="copyright">&copy; 2015 RAY <br>
-			Designed by <a href="http://multifour.com/" target="_blank">Multifour.com</a></p>
+			<p class="copyright">&copy; 2021 Konda Solutions <br>
+
 		</div>
 	</footer>
 	<!-- FOOTER END -->

@@ -17,15 +17,26 @@
 import webapp2
 from webapp2_extras import jinja2
 
+from webapp2_extras.users import users
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+
+        if user:
+            login_logout_url = users.create_logout_url("/")
+        else:
+            login_logout_url = users.create_login_url("/")
+
         jinja = jinja2.get_jinja2(app=self.app)
 
-        d = {}
+        d = {
+            "login_logout_url": login_logout_url,
+            "user": user
+        }
 
-        
         self.response.write(jinja.render_template("index.html", **d))
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
