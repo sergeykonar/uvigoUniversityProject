@@ -19,6 +19,11 @@ from webapp2_extras import jinja2
 
 from webapp2_extras.users import users
 
+
+
+
+
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()

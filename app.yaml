@@ -12,11 +12,17 @@ handlers:
 - url: /stylesheets
   static_dir: stylesheets
 
-- url: .*
+- url: /single
+  script: handlers.single.app
+
+- url: ./*
   script: handlers.main.app
+
+
 
 libraries:
 - name: webapp2
   version: "2.5.2"
 - name: jinja2
   version: "latest"
+
