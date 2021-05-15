@@ -40,8 +40,8 @@
 	</div>
 </div>
 
-<div id="wrap">  
-	
+<div id="wrap">
+
 	<!-- NAVIGATION BEGIN -->
 	<nav class="navbar navbar-fixed-top">
 		<div class="container_fluid"> <a class="navbar-brand goto" href="index.html#wrap"> <img src="../stylesheets/images/logo_nav.png" alt="Your logo" height="27" width="56" /> </a>
@@ -60,8 +60,8 @@
 			</div>
 		</div>
 	</nav>
-	<!-- NAVIGAION END --> 
-	
+	<!-- NAVIGAION END -->
+
 	<!-- INTRO BEGIN -->
 	<header id="blog-intro" class="intro-block bg-color-main" >
 		<div class="container">
@@ -69,83 +69,34 @@
 		</div>
 		<div class="block-bg" data-stellar-ratio="0.5"></div>
 	</header>
-	<!-- INTRO END --> 
-	
+	<!-- INTRO END -->
+
 	<!-- BLOG BEGIN -->
 	<section id="blog">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 single-content-sidebar">
+					<h2 class="head">Add article</h2>
 
-					<h2 class="head">{{article_data.title}}</h2>
-					<div class="news-info">
-						<div class="author"><i class="icon icon-user"></i>{{article_data.author}}</div>
-						<div class="date"><i class="icon icon-clock"></i>16.07.2014</div>
-						<div class="comments"><i class="icon icon-bubble"></i>7 Comments</div>
-					</div>
-					<div class="post-content"> <img src="{{article_data.image}}" alt="Resolving the issue with synchronization in old version" class="img-responsive"/>
 
-						<p>{{article_data.content}}</p>
-
-					</div>
-
-					<ul class="tags hollow">
-						<li><a href="#">Last update</a></li>
-						<li><a href="#">Photo</a></li>
-						<li><a href="#">Comming soon</a></li>
-						<li><a href="#">Offers</a></li>
-						<li><a href="#">New idea</a></li>
-					</ul>
-					
 					<!-- COMMENTS BEGIN -->
-					<div id="comments" class="comments">
-							<h3>Comments:</h3>
-							<ul class="comment-list">
-								{% for item in list_data %}
-								<li class="comment depth-1">
-									<div class="comment-body">
-										<div class="photo"><img src="../stylesheets/images/customer_photo.jpg" alt=""/></div>
-										<p>{{item.text}}</p>
-										<div class="comment-data"><span class="author">{{item.author}}</span><span class="date">{{item.hours}}</span><a href="#">Reply</a></div>
-									</div>
-									{% else %}
-									No data
-									{% endfor %}
 
-								</li>
-<!--								<li class="comment depth-1">-->
-<!--									<div class="comment-body">-->
-<!--										<div class="photo"><img src="../stylesheets/images/customer_photo.jpg" alt=""/></div>-->
-<!--										<p>Such simple and flexible settings make this product a universal solution for the most of the interested customers. Try it, I am sure for 100% that you will be satisfied.</p>-->
-<!--										<div class="comment-data"><span class="author">Tim Bim</span><span class="date">12 June 2014, 2:48 pm</span><a href="#">Reply</a></div>-->
-<!--									</div>-->
-<!--								</li>-->
-<!--								<li class="comment depth-1">-->
-<!--									<div class="comment-body">-->
-<!--										<div class="photo"><img src="../stylesheets/images/customer_photo.jpg" alt=""/></div>-->
-<!--										<p>It’s just five stars. I will certainly come back and bring my friends with me.</p>-->
-<!--										<div class="comment-data"><span class="author">Sam Willis</span><span class="date">13 June 2014, 9:01 pm</span><a href="#">Reply</a></div>-->
-<!--									</div>-->
-<!--								</li>-->
-							</ul>
-							<div class="comment-respond">
+                        <div class="comment-respond">
+                            <h3>Leave a comment:</h3>
+                            <form role="form"  id="comment_form" method="POST" action="/add">
+                                <div class="form-group">
+									<input type="text" class="form-control"  placeholder="Title" name="article_title">
+									<input type="text" class="form-control"  placeholder="Insert url od the image" name="img_article">
+                                    <textarea class="form-control" rows="6" placeholder="Type your article *" name="article_text"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn_send" id="comment_submit">Post</button>
+                                </div>
+                            </form>
+                        </div>
 
-								<h3>Leave a comment:</h3>
+					<!-- COMMENTS END -->
 
-								<form role="form"  id="comment_form" method="POST" action="/single?id={{ article_data.key.urlsafe() }} ">
-									<div class="form-group">
-										<textarea class="form-control" rows="6" placeholder="Type your comment *" id="comment_text" name="comment_text"></textarea>
-									</div>
-									<div class="form-group">
-										<button type="submit" class="btn btn_send" id="comment_submit">Post</button>
-									</div>
-								</form>
-
-
-							</div>
-					</div>
-					<!-- COMMENTS END --> 
-					
 				</div>
 <!--				<aside class="col-md-3 col-md-offset-1 blog-sidebar">-->
 <!--					<div class="search">-->
@@ -189,8 +140,8 @@
 			</div>
 		</div>
 	</section>
-	<!-- BLOG END --> 
-	
+	<!-- BLOG END -->
+
 	<!-- DOWNLOAD BEGIN -->
 	<section id="download" class="bg-color-main">
 		<div class="container-fluid wow fadeInDown"> <a href="index.html#wrap" class="goto">
@@ -199,19 +150,19 @@
 		<div class="block-bg" data-stellar-ratio="0.5"></div>
 	</section>
 
-	<!-- DOWNLOAD END --> 
-	
+	<!-- DOWNLOAD END -->
+
 	<!-- FOOTER BEGIN -->
 	<footer id="footer">
 		<div class="container"> <a href="index.html#wrap" class="logo goto"> <img src="../stylesheets/images/logo_small.png" alt="Your Logo" height="35" width="72"/> </a>
 			<p class="copyright">&copy; 2021 </p>
 		</div>
 	</footer>
-	<!-- FOOTER END --> 
-	
+	<!-- FOOTER END -->
+
 </div>
 
-<!-- MODALS BEGIN--> 
+<!-- MODALS BEGIN-->
 
 <!-- subscribe modal-->
 <div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-hidden="true">
@@ -245,9 +196,9 @@
 	</div>
 </div>
 
-<!-- MODALS END--> 
+<!-- MODALS END-->
 
-<!-- JavaScript --> 
+<!-- JavaScript -->
 <script src="../stylesheets/scripts/jquery-1.8.2.min.js"></script>
 <script src="../stylesheets/scripts/bootstrap.min.js"></script>
 <script src="../stylesheets/scripts/owl.carousel.min.js"></script>

@@ -15,6 +15,9 @@ handlers:
 - url: /single
   script: handlers.single.app
 
+- url: /add
+  script: handlers.add.app
+
 - url: ./*
   script: handlers.main.app
 

@@ -19,9 +19,7 @@ from webapp2_extras import jinja2
 
 from webapp2_extras.users import users
 
-
-
-
+from handlers.models import Article
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -35,9 +33,12 @@ class MainHandler(webapp2.RequestHandler):
 
         jinja = jinja2.get_jinja2(app=self.app)
 
+        article_data = Article.query().order(-Article.hours)
+
         d = {
             "login_logout_url": login_logout_url,
-            "user": user
+            "user": user,
+            "article_data": article_data
         }
 
         self.response.write(jinja.render_template("index.html", **d))

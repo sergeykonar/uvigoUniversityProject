@@ -5,7 +5,7 @@
 
 <!-- Html Page Specific -->
 <meta charset="utf-8">
-<title>Ray app landing - shared on themelock.com</title>
+<title>Title</title>
 <meta name="description" content="RAY - App Landing Page">
 <meta name="author" content="Multifour | multifour.com">
 
@@ -46,18 +46,17 @@
 	<nav class="navbar navbar-fixed-top navbar-slide">
 			<div class="container_fluid">
 				<a class="navbar-brand goto" href="index.html#wrap"> <img src="stylesheets/images/logo_nav.png" alt="Your logo" height="50" width="50" /> </a>
-				<a class="contact-btn icon-envelope" data-toggle="modal" data-target="#modalContact"></a>
+
 				<button class="navbar-toggle menu-collapse-btn collapsed" data-toggle="collapse" data-target=".navMenuCollapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<div class="collapse navbar-collapse navMenuCollapse">
 					<ul class="nav">
 						<li><a href="#features">Features</a> </li>
 						<li><a href="#benefits1">Benefits</a></li>
 						<li><a href="#screenshots">Screenshots</a></li>
-						<li><a href="#pricing-table">Price</a></li>
-						<li><a href="#testimonials">Testimonials</a></li>
+
 						<li><a href="#news">News</a></li>
 						<li><a href="#social">Stay tuned</a></li>
-
+						{% if user %}<li><a href="add">Add article</a></li>{% else %}{% endif %}
 <!--  LOGIN / LOGOUT -->						<li><a href="{{ login_logout_url }}">{% if user %}{{user}}{% else %}Sign In{% endif %}</a></li>
 					</ul>
 				</div>
@@ -75,13 +74,13 @@
 			<div class="row">
 				<div class="col-md-8 col-sm-12">
 					<img class="logo" height="400" width="400" src="stylesheets/images/logo@2x.png" alt="Your Logo"  />
-					<h1 class="slogan">The Best Start Up For <br> Your Elegant App</h1>
-					<a class="download-btn-alt android-btn invert" href="#">
+					<h1 class="slogan">Our team will build <br> Your Elegant App</h1>
+					<a target="_blank" class="download-btn-alt android-btn invert" href="https://play.google.com/store/apps/details?id=sergey.dev.konda">
 						<i class="icon soc-icon-android"></i>Download for <b>Android</b>
 					</a>
 				</div>
 				<div class="col-md-4 hidden-sm hidden-xs">
-					<img class="intro-screen wow bounceInUp" data-wow-delay="0.5s" src="stylesheets/images/intro_screen.png" width="400" height="775" alt="" />
+					<img class="intro-screen wow bounceInUp" data-wow-delay="0.5s" src="stylesheets/images/1.png" width="400" height="775" alt="" />
 				</div>
 			</div>
 		</div>
@@ -102,36 +101,36 @@
 				<div class="col-sm-4">
 					<ul class="item-list-right item-list-big">
 						<li class="wow fadeInLeft">
-							<i class="icon icon-screen-desktop"></i>
+
 							<h3>Responsive design</h3>
 							<p>Your project looks great on any device. Content can be easily read and a user understands freely what you wanted to say him or her.</p>
 						</li>
 						<li class="wow fadeInLeft">
-							<i class="icon icon-drop"></i>
+
 							<h3>Color schemes</h3>
-							<p>The set of ready made CSS files with different color schemes will help you in quick landing’s adaptation according to your benchmark style.</p>
+							<p>We design the app according to customer's needs</p>
 						</li>
 						<li class="wow fadeInLeft">
-							<i class="icon icon-doc"></i>
-							<h3>PSD Is Included </h3>
-							<p>The graphic source file in PSD format is included in the archive.</p>
+
+							<h3>APK files</h3>
+							<p>The application file in APL format is provided.</p>
 						</li>
 					</ul>
 				</div>
 				<div class="col-sm-4 col-sm-push-4">
 					<ul class="item-list-left item-list-big">
 						<li class="wow fadeInRight">
-							<i class="icon icon-diamond"></i>
+
 							<h3>Pure &amp; Simple</h3>
-							<p>No fluff. Nothing should lead the visitor away from the main essence of website. There must be just important information.</p>
+							<p>No fluff. Nothing should lead the visitor away from the main essence of application. There must be just important information.</p>
 						</li>
 						<li class="wow fadeInRight">
-							<i class="icon icon-layers"></i>
+
 							<h3>Documentation</h3>
-							<p>The detailed documentation will help you in adjusting the project with little effort according to your requirements.</p>
+							<p>The detailed documentation will help you to publish your app to PlayMarket</p>
 						</li>
 						<li class="wow fadeInRight">
-							<i class="icon icon-basket-loaded"></i>
+
 							<h3>Multiplatform</h3>
 							<p>The page is adapted to the most of the popular platform in segment.</p>
 						</li>
@@ -141,7 +140,7 @@
 					<div class="animation-box wow bounceIn">
 					 	<img class="highlight-left wow" src="stylesheets/images/light.png" height="192" width="48" alt="" />
 						<img class="highlight-right wow" src="stylesheets/images/light.png" height="192" width="48" alt="" />
-						<img class="screen" src="stylesheets/images/features_screen.png" alt="" height="581" width="300" />
+						<img class="screen" src="stylesheets/images/2.png" alt="" height="581" width="300" />
 					</div>
 				</div>
 			</div>
@@ -158,7 +157,7 @@
 				<h2>Our works</h2>
 				<p>In our work we try to use only the most modern, convenient and interesting solutions.<br>We want the template you downloaded look unique and new for such a long time as it is possible. </p>
 			</div>
-			<img class="screen wow bounceInUp" src="stylesheets/images/innovation_screen.png" height="387" width="800" alt="" />
+			<img class="screen wow bounceInUp" src="stylesheets/images/q.png" height="387" width="800" alt="" />
 		</div>
 		<div id="ray1" class="ray ray-horizontal"></div>
 		<div id="ray2" class="ray ray-horizontal"></div>
@@ -180,20 +179,19 @@
 
 					<ul class="item-list-left">
 						<li>
-							<i class="icon icon-picture color"></i>
-							<h4 class="color">6 Types of Intro</h4>
-							<p>Today Intro is a very important element of any project.
-It can be named even a face of the project.</p>
+
+							<h4 class="color">High quality code</h4>
+							<p>Our team understands the importance of writing high quality and maintainable code</p>
 						</li>
 						<li>
-							<i class="icon icon-equalizer color"></i>
-							<h4 class="color">Stunning flexibility</h4>
+
+							<h4 class="color">Modern technology stack</h4>
 							<p>The given template is armed with the number of settings,
 so you can easily adapt it according to you requirements.</p>
 						</li>
 						<li>
-							<i class="icon icon-bar-chart color"></i>
-							<h4 class="color">Step on the New Level</h4>
+
+							<h4 class="color">Professional team</h4>
 							<p>Innovative solutions and simple mathematically calculated
 design make it actual for a long time.</p>
 						</li>
@@ -205,8 +203,8 @@ design make it actual for a long time.</p>
 							<img class="base wow" src="stylesheets/images/flare_base.png" alt="" />
 							<img class="shapes wow" src="/stylesheets/images/flare_shapes.png" alt="" />
 						</div>
-						<img class="screen above" src="stylesheets/images/screen_couple_above.png" alt="" height="484" width="250" />
-						<img class="screen beyond wow fadeInRight" data-wow-delay="0.5s" src="stylesheets/images/screen_couple_beyond.png" alt="" height="407" width="210" />
+						<img class="screen above" src="stylesheets/images/3.png" alt="" height="484" width="250" />
+						<img class="screen beyond wow fadeInRight" data-wow-delay="0.5s" src="stylesheets/images/4.png" alt="" height="407" width="210" />
 					</div>
 				</div>
 			</div>
@@ -215,38 +213,15 @@ design make it actual for a long time.</p>
 	<!-- BENEFITS1 END -->
 
 
-	<!-- BENEFITS2 BEGIN -->
-	<section id="benefits2" class="img-block-2col bg-color2">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-sm-push-6">
-					<div class="title">
-						<h2>The Heart</h2>
-					</div>
-					<p>So, what is the secret of successful template design? First of all, it is its friendliness – both for the template’s owner and for his or her future targeted audience. UX and UI are not just empty phrases for us. It is very important for us that the user could understand correctly the message  your project’s trying to say to him or her. But, correct giving of the information is just a half of success.</p>
-					<p>Emotions that causes your project in visitor are no less important ticket to success. Modern solutions, interesting elements, unique approach to details make this template recognizable and interesting. You project will not look like a template bought in a store and adapted within couple of hours. Oh, no! This is not your case. You obtain qualitative, fascinating and juicy final product that is modern and actual. Qualitative and flexible code lays in base of this great product.</p>
-				</div>
-				<div class="col-sm-6 col-sm-pull-6">
-					<div class="screen-couple-left wow fadeInLeftBig">
-						<div class="fog fog-top wow"></div>
-						<div class="fog fog-bottom wow"></div>
-						<img class="screen above" src="stylesheets/images/screen_couple_above_v2.png" alt="" height="484" width="250"/>
-						<img class="screen beyond wow fadeInLeft" data-wow-delay="0.5s" src="stylesheets/images/screen_couple_beyond_v2.png" alt="" height="407" width="210" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- BENEFITS2 END -->
 
 
 	<!-- SCREENSHOTS BEGIN -->
 	<section id="screenshots" class="bg-color2">
 		<div class="container-fluid wow fadeIn">
-			<h2>Screenshots</h2>
+			<h2>Other works</h2>
 			<div id="screenshots-slider" class="owl-carousel">
-				<a class="item" href="./images/screen1.jpg" title="App Screen 1"><img src="stylesheets/images/screen1.jpg" alt="screen1" width="250" height="444" /></a>
-				<a class="item" href="./images/screen1.jpg" title="App Screen 2"><img src="stylesheets/images/screen1.jpg" alt="screen1" width="250" height="444"/></a>
+				<a class="item" href="stylesheets/images/5.png" title="App Screen 1"><img src="stylesheets/images/5.png" alt="screen1" width="250" height="444" /></a>
+				<a class="item" href="stylesheets/images/6.png" title="App Screen 2"><img src="stylesheets/images/6.png" alt="screen1" width="250" height="444"/></a>
 				<a class="item" href="./images/screen1.jpg" title="App Screen 3"><img src="stylesheets/images/screen1.jpg" alt="screen1" width="250" height="444"/></a>
 				<a class="item" href="./images/screen1.jpg" title="App Screen 4"><img src="stylesheets/images/screen1.jpg" alt="screen1" width="250" height="444"/></a>
 				<a class="item" href="./images/screen1.jpg" title="App Screen 5"><img src="stylesheets/images/screen1.jpg" alt="screen1" width="250" height="444"/></a>
@@ -265,22 +240,22 @@ design make it actual for a long time.</p>
 		<div class="container">
 			<ul class="facts-list">
 				<li class="wow bounceIn">
-					<i class="icon icon-cloud-download"></i>
+
 					<h3 class="wow">284</h3>
 					<h4>Downloads</h4>
 				</li>
 				<li class="wow bounceIn" data-wow-delay="0.4s">
-					<i class="icon icon-star"></i>
+
 					<h3 class="wow">135</h3>
 					<h4>Top Rates</h4>
 				</li>
 				<li class="wow bounceIn" data-wow-delay="0.8s">
-					<i class="icon icon-like"></i>
+
 					<h3 class="wow">77</h3>
 					<h4>Likes</h4>
 				</li>
 				<li class="wow bounceIn" data-wow-delay="1.2s">
-					<i class="icon icon-clock"></i>
+
 					<h3 class="wow">741</h3>
 					<h4>Hours Safe</h4>
 				</li>
@@ -302,43 +277,24 @@ design make it actual for a long time.</p>
 				<p>Here you can find all interesting facts about this app:<br>the last updates, sales, latest things and the developers’ stories.</p>
 			</div>
 			<ul class="news-list">
+				{% for item in article_data %}
 				<li class="wow fadeInUp">
-					<h3><a href="single">Look for the latest update in coming days.</a></h3>
+
+					<h3><a href="/single?id={{ item.key.urlsafe() }}">{{item.title}}</a></h3>
 					<div class="news-info">
-						<div class="author"><i class="icon icon-user"></i>John Doe</div>
-						<div class="date"><i class="icon icon-clock"></i>16.07.2014</div>
-						<div class="comments"><i class="icon icon-bubble"></i>7 Comments</div>
+						<div class="author">{{item.author}}</div>
+						<div class="date">{{item.hours}}</div>
+
 					</div>
 				</li>
-				<li class="wow fadeInUp">
-					<h3><a href="single-no-sidebar.html">The meeting of developers of cross-platform apps.</a></h3>
-					<div class="news-info">
-						<div class="author"><i class="icon icon-user"></i>John Doe</div>
-						<div class="date"><i class="icon icon-clock"></i>16.07.2014</div>
-						<div class="comments"><i class="icon icon-bubble"></i>7 Comments</div>
-					</div>
-				</li>
-<!--				<li class="wow fadeInUp">-->
-<!--					<h3><a href="single">The new functional sketches.</a></h3>-->
-<!--					<div class="news-info">-->
-<!--						<div class="author"><i class="icon icon-user"></i>John Doe</div>-->
-<!--						<div class="date"><i class="icon icon-clock"></i>16.07.2014</div>-->
-<!--						<div class="comments"><i class="icon icon-bubble"></i>7 Comments</div>-->
-<!--					</div>-->
-<!--				</li>-->
-<!--				<li class="wow fadeInUp">-->
-<!--					<h3><a href="single">Resolving the issue with synchronization in old version.</a></h3>-->
-<!--					<div class="news-info">-->
-<!--						<div class="author"><i class="icon icon-user"></i>John Doe</div>-->
-<!--						<div class="date"><i class="icon icon-clock"></i>16.07.2014</div>-->
-<!--						<div class="comments"><i class="icon icon-bubble"></i>7 Comments</div>-->
-<!--					</div>-->
-<!--				</li>-->
+				{% else %}
+				No data
+				{% endfor %}
+
 			</ul>
-<!--			<a href="blog.html" class="round-btn wow fadeInUp">Older news</a>-->
+
 		</div>
 	</section>
-	<!-- NEWS END -->
 
 
 	<!-- SOCIAL BEGIN -->
@@ -350,25 +306,15 @@ design make it actual for a long time.</p>
 			</div>
 
 			<ul class="soc-list wow flipInX">
-				<li><a href="#"><i class="icon soc-icon-twitter"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-facebook"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-dribbble"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-googleplus"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-linkedin"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-instagram"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-pinterest"></i></a></li>
-				<li><a href="#"><i class="icon soc-icon-flickr"></i></a></li>
+
+				<li><a href="https://www.facebook.com/sergey.konar"><i class="icon soc-icon-facebook"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/serhii-konar/"><i class="icon soc-icon-linkedin"></i></a></li>
+				<li><a href="https://www.instagram.com/sergey.konar/"><i class="icon soc-icon-instagram"></i></a></li>
+
 			</ul>
 
 
-			<form action="stylesheets/scripts/subscribe.php" method="post" id="subscribe_form">
-            	<div class="input-group">
-                	<input class="form-control" type="email" name="email" id="subscribe_email" placeholder="Subscribe">
-                    <div class="input-group-btn">
-                    	<button type="submit" id="subscribe_submit" data-loading-text="&bull;&bull;&bull;"><i class="icon icon-paper-plane"></i></button>
-                    </div>
-                </div>
-            </form>
+
 
 		</div>
 	</section>
@@ -378,8 +324,8 @@ design make it actual for a long time.</p>
 	<!-- DOWNLOAD BEGIN -->
 	<section id="download" class="bg-color-main">
 		<div class="container-fluid wow fadeInDown">
-			<a href="#wrap" class="goto">
-				<h2><i class="icon soc-icon-apple"></i>Download App</h2>
+			<a target="_blank" href="https://play.google.com/store/apps/details?id=sergey.dev.konda" class="goto">
+				<h2><i class="icon soc-icon-android"></i>Download App</h2>
 			</a>
 		</div>
 		<div class="block-bg" data-stellar-ratio="0.5"></div>
@@ -452,8 +398,8 @@ design make it actual for a long time.</p>
 <script src="stylesheets/scripts/retina.min.js"></script>
 <script src="stylesheets/scripts/custom.js"></script>
 
-<!--[if lte IE 9]>
-	<script src="stylesheets/scripts/respond.min.js"></script>
-<![endif]-->
+
+<script src="stylesheets/scripts/respond.min.js"></script>
+
 </body>
 </html>
